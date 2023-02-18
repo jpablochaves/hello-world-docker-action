@@ -8,7 +8,7 @@ inputs:
     required: true
     default: "World"
 outputs:
-  OUTPUT_TIME: # id of output
+  time: # id of output
     description: "The time we greeted returned as date from the container"
 runs:
   using: "docker"
