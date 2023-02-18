@@ -41,6 +41,6 @@ hello_world_job:
     uses: github_username/hello-world-action@v1 
     with:
       who-to-greet: 'Pablo'
-  - name: Get the output time 
-    run: echo "The time we greeted was: ${{ steps.hello.outputs.time }}" 
+  - name: Get output time
+    run: echo "Greeting time was ${{ steps.hello.outputs.time }}"
 ```

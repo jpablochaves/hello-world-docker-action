@@ -6,5 +6,5 @@
 echo "Hello $1"
 time=$(date)
 # Here we set the output declare on the action.yml file under output as time. output -> time
-# workflow command -> time
-echo "::set-output name=time::$time"
+# workflow command -> time | echo "::set-output name={name}::{value}" its deprecated
+echo "name=$time" >> $GITHUB_OUTPUT
