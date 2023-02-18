@@ -21,3 +21,26 @@ when the container gets executed it will run entrypoint.sh
 needs executable permissions (+x)
 Echoes the $1 parameter (from the action yaml file -> who-to-greet)
 Echoes the time of the greeting and defines the workflow command and output time
+
+
+#### Versioning for Actions
+```
+git tag -a -m "my first action release" v1
+git push --follow-tags
+```
+
+
+## How to used the Action in a workflow?
+```
+hello_world_job:
+  runs-on: ubuntu-latest
+  name: Job to say hello
+  steps:
+  - name: Hello world action step 
+    id: hello 
+    uses: github_username/hello-world-action@v1 
+    with:
+      who-to-greet: 'Pablo'
+  - name: Get the output time 
+    run: echo "The time we greeted was: ${{ steps.hello.outputs.time }}" 
+```
