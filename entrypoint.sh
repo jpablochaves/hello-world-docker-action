@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -l
 # entrypoint.sh needs permissions to be executable (chmod +x)
 
 
