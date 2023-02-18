@@ -30,7 +30,7 @@ git push --follow-tags
 ```
 
 
-## How to used the Action in a workflow?
+## How to use the Action in a workflow?
 ```
 hello_world_job:
   runs-on: ubuntu-latest
